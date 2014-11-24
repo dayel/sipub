@@ -26,23 +26,19 @@ Padron de Beneficiarios
 <hr>
 <div class="well">
 <form role="form" name="login_form" id="login_form" action="validar.php" method="post">
-                                       
-                                       <div class="form-group input-group has-success">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                            <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
-                                       
-                                       </div>
 <div class="form-group input-group has-success">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                            <input type="password" class="form-control" placeholder="Clave de Acceso" name="clave" id="clave">
-                                       
-                                       </div>                                       
-                                       <button type="button" class="btn btn-success" onclick="validar();" >
-  <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Ingresar
+<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+<input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
+</div>
+<div class="form-group input-group has-success">
+<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+<input type="password" class="form-control" placeholder="Clave de Acceso" name="clave" id="clave">
+</div>                                       
+<button type="button" class="btn btn-success" onclick="validar();" >
+<span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Ingresar
 </button>
-                                    </form>
-
-    </div>
+</form>
+</div>
 </div>
 <script src="js/validar_login.js"></script>
 <script src="js/jquery-1.10.2.min.js"></script>

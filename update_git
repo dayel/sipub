@@ -1,0 +1,12 @@
+#!/bin/bash
+echo actualizando github
+cd /var/www/html/sipub
+git init
+git status
+git add .
+echo ingrese el commit
+read comentario
+git commit -m "$comentario"
+git push origin master
+echo trabajo realizado
+exit

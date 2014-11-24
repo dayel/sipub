@@ -1,6 +1,7 @@
 <?php
 //primeramente se valida que la nformación venga del formulario que debe ser
 //y no de un formulario externo o ajeno al sitio
+ini_set("display_errors",'1');
 session_start();
 $url_falsa = md5(rand());
 if($_SESSION['iniciar'] != md5("omnes generationes"))
@@ -29,16 +30,11 @@ unset($url_falsa);
 //se liberan variables que ya no se van a usar en este punto
 //se revisa que el usuario este registrado en el sistema
 //cargamos la conexion a la base de datos en modo consulta
-require_once 'seguridad/conn_consulta.php';
+require_once 'seguridad/conexion.php';
+$usr_bd = 'root';
+$cve_bd = 'tr15t4n14';
+$con = new conexiones;
+$conectarse = $con->conectar($usr_bd,$cve_bd) ;
 //hacemos llamada al arcivo login.php que es el que nos indica si esta o no logueado el usuario
 require_once 'seguridad/login.php';
-//si todo es correcto cargamos la pagina principal del sistema, en caso contrario mandamos un mensaje
-//de usaurio o clave incorrectos
-if(!$resultado){
-session_destroy();
-header("location index.php?mensaje=1");
-exit()
-}else{
-"hola mundo";
-}
 ?>
