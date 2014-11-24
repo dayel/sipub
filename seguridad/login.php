@@ -13,6 +13,7 @@ $ConsultarUsuario = "SELECT count(*) FROM usuarios WHERE usuario = '$usr' AND cl
 $Resultado = $conectarse->query($ConsultarUsuario);
 $row = $Resultado->fetch_array();
 //si encuentra un usuario registramos las variables de sesion y abrimos el FrontEnd
+
 if($row[0]){
  require_once 'registro_variables.php';
  header("location: FrontEnd");

@@ -24,7 +24,6 @@ for($z=0;$z<count($padron);$z =$z+1){
    } 
 }
 }
-unset($_SESSION['iniciar']);
 unset($padron);
 unset($url_falsa);
 //se liberan variables que ya no se van a usar en este punto
